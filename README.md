@@ -6,11 +6,12 @@ This app runs BLAST locally then parses and displays the results. It can be dire
 * Unix like environment
 * [Current BLAST executables](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download)
 * The following R packages
-  1. plyr
-  2. dplyr
-  3. XML
-  4. DT
-  5. shinythemes (optional) 
+  1. shiny
+  2. plyr
+  3. dplyr
+  4. XML
+  5. DT
+  6. shinythemes (optional) 
 
 ## Usage: 
 In the ui.r file, change line 16 `choices=c("NvERTx.4","nr")` to include your databases. 

@@ -1,6 +1,8 @@
 # Shiny_BLAST
 ## Description: 
-This app runs BLAST locally then parses and displays the results. It can be directly integrated into existing apps or function as a standalone blast server.
+This app runs BLAST locally then parses and displays the results. It can be directly integrated into existing apps or function as a standalone blast server. 
+
+A Blog post describing the code can be found <a href="http://www.2-bitbio.com/2017/06/running-blast-in-shiny-web-application.html">here</a>
 
 ## Requirements: 
 * Unix like environment

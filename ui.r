@@ -1,6 +1,8 @@
 library(shinythemes)
 library(DT)
 
+custom_db <- c("LvTx")
+
 ui <- fluidPage(theme = shinytheme("cerulean"),
                 tagList(
                   tags$head(
@@ -13,7 +15,7 @@ ui <- fluidPage(theme = shinytheme("cerulean"),
                 mainPanel(
                   headerPanel('Shiny Blast!'),
                   textAreaInput('query', 'Input sequence:', value = "", placeholder = "", width = "600px", height="200px"),
-                  selectInput("db", "Databse:", choices=c("NvERTx.4","nr"), width="120px"),
+                  selectInput("db", "Databse:", choices=c(custom_db,"nr"), width="120px"),
                   div(style="display:inline-block",
                       selectInput("program", "Program:", choices=c("blastn","tblastn"), width="100px")),
                   div(style="display:inline-block",

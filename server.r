@@ -5,6 +5,9 @@ library(DT)
 
 server <- function(input, output, session){
   
+  custom_db <- c("LvTx")
+  custom_db_path <- c("/LV_transcriptome/LvTx")
+  
   blastresults <- eventReactive(input$blast, {
     
     #gather input and set up temp file
@@ -12,8 +15,8 @@ server <- function(input, output, session){
     tmp <- tempfile(fileext = ".fa")
     
     #if else chooses the right database
-    if (input$db =="NvERTx.4"){
-      db <- c("/Users/Jake/Documents/GitHub_repos/NvER_plotter_django/nemVec_ER/blast_db/NvERTx.4")
+    if (input$db == custom_db){
+      db <- custom_db_path
       remote <- c("")
     } else {
       db <- c("nr")
@@ -29,7 +32,7 @@ server <- function(input, output, session){
     }
     
     #calls the blast
-    data <- system(paste0(input$program," -query ",tmp," -db ",db," -dust no -evalue ",input$eval," -outfmt 5 -max_hsps 1 -max_target_seqs 10 ",remote), intern = T)
+    data <- system(paste0(input$program," -query ",tmp," -db ",db," -evalue ",input$eval," -outfmt 5 -max_hsps 1 -max_target_seqs 10 ",remote), intern = T)
     xmlParse(data)
     }, ignoreNULL= T)
 

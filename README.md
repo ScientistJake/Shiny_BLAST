@@ -2,6 +2,8 @@
 ## Description: 
 This app runs BLAST locally then parses and displays the results. It can be directly integrated into existing apps or function as a standalone blast server. 
 
+<img src='https://3.bp.blogspot.com/-LlMxq12Ze60/WVIqXb-smiI/AAAAAAAAJME/7XWKnzq48fobN7tk1nzdkKD1jOYlP63YwCLcBGAs/s1600/Screen%2BShot%2B2017-06-27%2Bat%2B11.49.37.png'></img>
+
 A Blog post describing the code can be found <a href="http://www.2-bitbio.com/2017/06/running-blast-in-shiny-web-application.html">here</a>
 
 ## Requirements: 
